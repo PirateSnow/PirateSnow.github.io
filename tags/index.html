@@ -42,6 +42,16 @@
 
 
 
+  <script>
+  (function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/0f81ff2f.js","daovoice")
+  daovoice('init', {
+      app_id: "7aa66109"
+    });
+  daovoice('update');
+  </script>
+
+
+
 
 
 
@@ -140,14 +150,17 @@
 
 
 
+<meta name="description" content="汐海潮笙，草木成涛，鱼虫鸣籁，极乐天韵，静乐至志">
 <meta property="og:type" content="website">
 <meta property="og:title" content="标签">
 <meta property="og:url" content="http://www.jlzsnow.top/tags/index.html">
 <meta property="og:site_name" content="SNOW-静乐志">
+<meta property="og:description" content="汐海潮笙，草木成涛，鱼虫鸣籁，极乐天韵，静乐至志">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2018-07-11T03:05:22.236Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="标签">
+<meta name="twitter:description" content="汐海潮笙，草木成涛，鱼虫鸣籁，极乐天韵，静乐至志">
 
 
 
@@ -157,7 +170,7 @@
     root: '/',
     scheme: 'Mist',
     version: '5.1.4',
-    sidebar: {"position":"right","display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":false},
+    sidebar: {"position":"right","display":"always","offset":12,"b2t":false,"scrollpercent":true,"onmobile":false},
     fancybox: true,
     tabs: true,
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
@@ -361,10 +374,10 @@
         
           <div class="tag-cloud">
             <div class="tag-cloud-title">
-                目前共计 1 个标签
+                目前共计 2 个标签
             </div>
             <div class="tag-cloud-tags">
-              <a href="/tags/博客/" style="font-size: 12px; color: #ccc">博客</a>
+              <a href="/tags/博客/" style="font-size: 12px; color: #ccc">博客</a> <a href="/tags/静乐志/" style="font-size: 12px; color: #ccc">静乐志</a>
             </div>
           </div>
         
@@ -385,6 +398,9 @@
 
           
 
+  
+    <div id="gitalk-container">
+	</div>
   
 
 
@@ -418,7 +434,7 @@
                 alt="汐海潮笙" />
             
               <p class="site-author-name" itemprop="name">汐海潮笙</p>
-              <p class="site-description motion-element" itemprop="description"></p>
+              <p class="site-description motion-element" itemprop="description">汐海潮笙，草木成涛，鱼虫鸣籁，极乐天韵，静乐至志</p>
           </div>
 
           <nav class="site-state motion-element">
@@ -428,7 +444,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -439,7 +455,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -450,7 +466,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -547,7 +563,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共522字</span>
+  <span class="post-count">博客全站共1.2k字</span>
 </div>
         
 
@@ -690,6 +706,22 @@
 
 
 
+
+
+  <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+  <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+   <script type="text/javascript">
+        var gitalk = new Gitalk({
+          clientID: 'Client ID',
+          clientSecret: 'Client Secret',
+          repo: 'PirateSnow.github.io',
+          owner: 'PirateSnow',
+          admin: ['PirateSnow'],
+          id: location.pathname,
+          distractionFreeMode: 'true'
+        })
+        gitalk.render('gitalk-container')           
+       </script>
 
 
   
