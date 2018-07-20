@@ -371,6 +371,34 @@
 
       <h2 class="post-title">
         
+            <a class="post-title-link" href="/2018/07/20/hexo-next博客添加评论功能/" itemprop="url">
+              
+                <span itemprop="name"><center>hexo-next博客添加评论功能</center></span>
+              
+            </a>
+        
+      </h2>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2018-07-20T13:32:34+08:00"
+              content="2018-07-20" >
+          07-20
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
+      
+        
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h2 class="post-title">
+        
             <a class="post-title-link" href="/2018/07/18/hexo-next博客添加在线联系功能/" itemprop="url">
               
                 <span itemprop="name"><center>hexo-next博客添加在线联系功能</center></span>
@@ -475,7 +503,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -594,7 +622,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共1.4k字</span>
+  <span class="post-count">博客全站共1.6k字</span>
 </div>
         
 
@@ -732,6 +760,28 @@
 
 
 
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'GjbfBGnek8QG5h1MGcFHG9CB-gzGzoHsz',
+        appKey: 'y1UYbkQFvVjCSazTxyvnGnQh',
+        placeholder: '欢迎留言，或者点击右下角的聊天窗口，看到了我都会回复的',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
 
 
 

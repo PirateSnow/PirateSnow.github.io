@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.jlzsnow.top/"/>
-  <updated>2018-07-18T14:23:34.029Z</updated>
+  <updated>2018-07-20T05:39:51.570Z</updated>
   <id>http://www.jlzsnow.top/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>&lt;center&gt;hexo-next博客添加评论功能&lt;/center&gt;</title>
+    <link href="http://www.jlzsnow.top/2018/07/20/hexo-next%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0%E8%AF%84%E8%AE%BA%E5%8A%9F%E8%83%BD/"/>
+    <id>http://www.jlzsnow.top/2018/07/20/hexo-next博客添加评论功能/</id>
+    <published>2018-07-20T05:32:34.000Z</published>
+    <updated>2018-07-20T05:39:51.570Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="添加博客功能"><a href="#添加博客功能" class="headerlink" title="添加博客功能"></a>添加博客功能</h1><p>&emsp;&emsp;今天我又更新了，本来想加载gitalk博客评论的，结果加载的过程中出错，在解决问题的过程中，发现了一个更好的，这就是极简的valine，这个真的是美爆了，果断放弃gitalk，换成valine，下面是我的添加过程，希望对大家有帮助。<br><a id="more"></a><br>&emsp;&emsp;我参考了下面的<a href="https://blog.csdn.net/blue_zy/article/details/79071414" target="_blank" rel="noopener">这篇博客</a>，大家照着来就行了。为什么我不再写一篇呢？因为我的图片上传功能还没修好，贼难受，就先这样记录，等我下午中期答辩结束再去找问题。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;添加博客功能&quot;&gt;&lt;a href=&quot;#添加博客功能&quot; class=&quot;headerlink&quot; title=&quot;添加博客功能&quot;&gt;&lt;/a&gt;添加博客功能&lt;/h1&gt;&lt;p&gt;&amp;emsp;&amp;emsp;今天我又更新了，本来想加载gitalk博客评论的，结果加载的过程中出错，在解决问题的过程中，发现了一个更好的，这就是极简的valine，这个真的是美爆了，果断放弃gitalk，换成valine，下面是我的添加过程，希望对大家有帮助。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="博客" scheme="http://www.jlzsnow.top/categories/%E5%8D%9A%E5%AE%A2/"/>
+    
+    
+      <category term="博客" scheme="http://www.jlzsnow.top/tags/%E5%8D%9A%E5%AE%A2/"/>
+    
+  </entry>
   
   <entry>
     <title>&lt;center&gt;hexo-next博客添加在线联系功能&lt;/center&gt;</title>

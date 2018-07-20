@@ -437,6 +437,16 @@
 
           
             
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/07/17/观看“我不是药神”有感/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/07/17/观看“我不是药神”有感/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
           
 
           
@@ -495,7 +505,7 @@
           
             <div class="post-gallery-row">
               <a class="post-gallery-img fancybox"
-                 href="http://bruce.u.qiniudn.com/2013/11/27/reading/photos-0.jpg" rel="gallery_cjjr7we180002j8wf8nm08756"
+                 href="http://bruce.u.qiniudn.com/2013/11/27/reading/photos-0.jpg" rel="gallery_cjjtk2ici0008z8wfz4h8xade"
                  itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="http://bruce.u.qiniudn.com/2013/11/27/reading/photos-0.jpg" itemprop="contentUrl"/>
               </a>
@@ -503,7 +513,7 @@
           
             
               <a class="post-gallery-img fancybox"
-                 href="http://bruce.u.qiniudn.com/2013/11/27/reading/photos-1.jpg" rel="gallery_cjjr7we180002j8wf8nm08756"
+                 href="http://bruce.u.qiniudn.com/2013/11/27/reading/photos-1.jpg" rel="gallery_cjjtk2ici0008z8wfz4h8xade"
                  itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="http://bruce.u.qiniudn.com/2013/11/27/reading/photos-1.jpg" itemprop="contentUrl"/>
               </a>
@@ -511,7 +521,7 @@
           
             
               <a class="post-gallery-img fancybox"
-                 href="/imags/yaoshen/yaoshen.ipg" rel="gallery_cjjr7we180002j8wf8nm08756"
+                 href="/imags/yaoshen/yaoshen.ipg" rel="gallery_cjjtk2ici0008z8wfz4h8xade"
                  itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="/imags/yaoshen/yaoshen.ipg" itemprop="contentUrl"/>
               </a>
@@ -654,7 +664,8 @@
           
 
   
-    <div id="gitalk-container"></div>
+    <div class="comments" id="comments">
+    </div>
   
 
 
@@ -698,7 +709,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -817,7 +828,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共1.4k字</span>
+  <span class="post-count">博客全站共1.6k字</span>
 </div>
         
 
@@ -960,22 +971,29 @@
 
 
 
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'GjbfBGnek8QG5h1MGcFHG9CB-gzGzoHsz',
+        appKey: 'y1UYbkQFvVjCSazTxyvnGnQh',
+        placeholder: '欢迎留言，或者点击右下角的聊天窗口，看到了我都会回复的',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
 
 
-  <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
-  <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
-   <script type="text/javascript">
-        var gitalk = new Gitalk({
-          clientID: '9d68a61bafb7c7caa54a',
-          clientSecret: '29e9bb44cb5d664c046e09b5c129c5c520499727',
-          repo: 'PirateSnow.github.io',
-          owner: 'PirateSnow',
-          admin: ['PirateSnow'],
-          id: location.pathname,
-          distractionFreeMode: 'true'
-        })
-        gitalk.render('gitalk-container')           
-       </script>
 
 
   
