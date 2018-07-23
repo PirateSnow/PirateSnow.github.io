@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[hexo-next博客中mathjax显示问题解决]]></title>
+    <url>%2F2018%2F07%2F23%2Fhexo-next%E5%8D%9A%E5%AE%A2%E4%B8%ADmathjax%E6%98%BE%E7%A4%BA%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%2F</url>
+    <content type="text"><![CDATA[问题描述&emsp;&emsp;在markdownPad2中用mathjax插入公式时，在线显示不了 解决方法&emsp;&emsp;第一步，在markdownPad中Tools-&gt;options-&gt;markdown-&gt;markdown processor选择GitHub flavored markdown(offline)&emsp;&emsp;第二步，在hexo中安装mathjax工具，执行以下命令就可以了12npm install hexo-math --savehexo math install &emsp;&emsp;第三步，此时，你去插入公式，还是显示不对，因为在mathjax中，‘\’默认为转义字符，所以我们需要修改文件，去掉转义字符，方法如下：&emsp;&emsp;在12&amp;emsp;&amp;emsp;第一个地方，```escape: /^\\([\\`*&#123;&#125;\[\]()# +\-.!_&gt;])/,```修改为```escape: /^\\([`*\[\]()# +\-.!_&gt;])/,``` &amp;emsp;&amp;emsp;第二个地方,```em: /^\b_((?:[^_]|__)+?)_\b|^\*((?:\*\*|[\s\S])+?)\*(?!\*)/,```修改为```em:/^\*((?:\*\*|[\s\S])+?)\*(?!\*)/, &emsp;&emsp;第四步，在主题配置文件12345```mathjax: enable: true per_page: false cdn: //cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML 这样，所有的步骤就都完成了，快去试试吧 参考文献搭建一个支持LaTEX的hexo博客在Hexo中渲染MathJax数学公式写完了一篇博客，来张图放松一下]]></content>
+      <categories>
+        <category>博客</category>
+      </categories>
+      <tags>
+        <tag>博客</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[解决图片在hexo-next博客下markdownpad2本地不显示问题]]></title>
     <url>%2F2018%2F07%2F23%2F%E8%A7%A3%E5%86%B3%E5%9B%BE%E7%89%87%E5%9C%A8hexo-next%E5%8D%9A%E5%AE%A2%E4%B8%8Bmarkdownpad2%E6%9C%AC%E5%9C%B0%E4%B8%8D%E6%98%BE%E7%A4%BA%E9%97%AE%E9%A2%98%2F</url>
     <content type="text"><![CDATA[问题描述&emsp;&emsp;前段时间刚开完玩博客，但是有个很大的问题就是本地图片在网上显示不了，总是会挂掉，很难受，就搞啊搞，总算是解决了。&emsp;&emsp;解决办法就是既然本地图片在hexo-next博客上回挂掉，那么久不放在本地了，而且放在本地的话，图片多了，生成静态文件的时候会非常慢，亲测，我就放了一张图片，就明显能感觉到变慢了，所以放到本地很不靠谱，那就是放在晚上喽，晚上选择性很多，但是要考虑到稳定性，我们现在这么折腾在GitHub上搭建个博客，各种个性化主题，我可不想我的图片三个月后莫名因为图床不服务了，我的博客上的图片也挂掉，那我会想弄死那些人，所以，以稳定优先考虑的按照我的方法来，如果你不想要稳定，或者只是玩玩，那么请出门右拐，随便选个图床。&emsp;&emsp;我选的是华为云对象存储作为我的图床，其实还有七牛云和阿里云都可以做，七牛云大家都推荐，但是实名认证贼麻烦，所以最后再阿里云和华为云之间选了华为云，这两个都差不多，而且流量包价格也一样的，所以朋友们不要问我那个好，都一样的，下面我以华为云为例，说下大概的过程： 具体步骤&emsp;&emsp;第一步，肯定是注册账号如下图：&emsp;&emsp;第二步，注册号之后，登录，然后实名认证，很快的，基本上照片上传之后三秒钟认证通过，相比七牛云的一天半，而且还要求我的照片清晰来说，真的超级快，这就是我选择华为云的原因。这部分比较简单，我就不上图了。&emsp;&emsp;第三步，点击下图中的控制台&emsp;&emsp;第四步，点击下图中的对象存储服务 &emsp;&emsp;第五步，点击下图中的创建桶，因为我已经创建过了，所以我的那个地方有条目，你们的应该是空的&emsp;&emsp;第六步，创建的详情下图所示：&emsp;&emsp;第七步，创建桶之后，点击返回桶列表，创建好的桶如下所示，演示如何上传文件&emsp;&emsp;第八步，如图所示，上传文件；&emsp;&emsp;第九步，如图所示，查看图片详情&emsp;&emsp;第十步，获得图片外链；&emsp;&emsp;第十一步，获得图片下载链接&emsp;&emsp;第十二步，购买流量包&emsp;&emsp;第十二步，如下图所示，选中，付钱就是了 总结&emsp;&emsp;以上就是所有的步骤，希望对大家有帮助。]]></content>
