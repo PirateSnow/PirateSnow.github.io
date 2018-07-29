@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[雪中悍刀行]]></title>
+    <url>%2F2018%2F07%2F29%2F%E9%9B%AA%E4%B8%AD%E6%82%8D%E5%88%80%E8%A1%8C%2F</url>
+    <content type="text"><![CDATA[&emsp;&emsp;不记得花了多长时间，终于把雪中悍刀行看完了，不得不说，这是我近几年看的，少有的武侠佳作，以前看书，各种没营养的垃圾小说，现在说实话，越看眼光越高，这部小说，不得不说，圆了作者的江湖梦，也圆了我们这些读者的少年江湖梦。这部小说给我很多感动，也羡慕书中的风流人物，觉得中国的古文是真的美，看完了，随便写点东西。&emsp;&emsp;春秋兴亡，风雨飘摇，霸业宏图，说与山鬼听木剑走江湖，义薄胜关公，折剑听雨落，江湖秋水阔两袖青蛇走，一剑开天门，甲子念绿袍，白发复狂歌白鹤下江南，三世为红颜，长誓破天门，红衣承一诺八国春秋崩，三甲天下敌，天地覆手间，人仙如提偶八百年如昨，丽珠含恨锁，真武两世魂，不悔三生恋大庚角誓杀，菜圃绿意遮，故国尘归土，白头与厮磨紫雷一夜雪，裙结解又结，峨眉多摧折，紫衣令江湖白衣诵般若，菩萨低垂眉，金刚伏魔怒，一禅在我心一杆梅子酒，绿紫雷光起，知报寸心间，懒与人辩说马踏六国崩，铁甲江湖折，佳人素衣剑，铁衣裹枯骨长衿撼青壑 指荡旧星罗，雨中高歌死，霸王落子安扣指问长生，三千红丝绕，佛魔蒙昧忘，世上已百年胭脂东西寻，舍利南北笑，风雨飘摇过，朱钗慰我心腴润幽香麝，剑冷情尚灼，无处觅佳人，念凉在我心双兔傍地走，雌雄莫需辨，正道在我心，兔死走狗烹黄庭洗凡浊，起手撼山阿，绿蚁慢饮酌，沧海化峭壑 &emsp;&emsp;哈哈哈，就写这么多。]]></content>
+      <categories>
+        <category>静乐志</category>
+      </categories>
+      <tags>
+        <tag>静乐志</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[hexo-next博客中mathjax显示问题解决]]></title>
     <url>%2F2018%2F07%2F23%2Fhexo-next%E5%8D%9A%E5%AE%A2%E4%B8%ADmathjax%E6%98%BE%E7%A4%BA%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%2F</url>
     <content type="text"><![CDATA[问题描述&emsp;&emsp;在markdownPad2中用mathjax插入公式时，在线显示不了 解决方法&emsp;&emsp;第一步，在markdownPad中Tools-&gt;options-&gt;markdown-&gt;markdown processor选择GitHub flavored markdown(offline)&emsp;&emsp;第二步，在hexo中安装mathjax工具，执行以下命令就可以了12npm install hexo-math --savehexo math install &emsp;&emsp;第三步，此时，你去插入公式，还是显示不对，因为在mathjax中，‘\’默认为转义字符，所以我们需要修改文件，去掉转义字符，方法如下：在./node_modules/marked/lib/文件下，用记事本打开mathjax.js文件，修改其中两个地方：第一个地方：1escape: /^\\([\\`*&#123;&#125;\[\]()# +\-.!_&gt;])/, 修改为1escape: /^\\([`*\[\]()# +\-.!_&gt;])/, 第二个地方：1em: /^\b_((?:[^_]|__)+?)_\b|^\*((?:\*\*|[\s\S])+?)\*(?!\*)/, 修改为1em:/^\*((?:\*\*|[\s\S])+?)\*(?!\*)/, 第四步，在主题配置文件_config.yml设置如下代码：1234mathjax: enable: true per_page: false cdn: //cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML 这样，所有的步骤就都完成了，快去试试吧 参考文献搭建一个支持LaTEX的hexo博客在Hexo中渲染MathJax数学公式写完了一篇博客，来张图放松一下]]></content>
