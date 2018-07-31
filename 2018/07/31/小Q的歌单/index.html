@@ -158,10 +158,12 @@
 <meta property="og:site_name" content="SNOW-静乐志">
 <meta property="og:description" content="问题描述–2018年腾讯秋招笔试真题小Q有X首长度为A的不同的歌和Y首长度为B的不同的歌，现在小Q想用这些歌组成一个总长度正好为K的歌单，每首歌最多只能在歌单中出现一次，在不考虑歌单内歌曲的先后顺序的情况下，请问有多少种组成歌单的方法。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-07-31T13:08:57.913Z">
+<meta property="og:image" content="https://blog-picture.obs.cn-north-1.myhwclouds.com/about/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20180723212253.jpg">
+<meta property="og:updated_time" content="2018-07-31T13:26:56.883Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="小Q的歌单">
 <meta name="twitter:description" content="问题描述–2018年腾讯秋招笔试真题小Q有X首长度为A的不同的歌和Y首长度为B的不同的歌，现在小Q想用这些歌组成一个总长度正好为K的歌单，每首歌最多只能在歌单中出现一次，在不考虑歌单内歌曲的先后顺序的情况下，请问有多少种组成歌单的方法。">
+<meta name="twitter:image" content="https://blog-picture.obs.cn-north-1.myhwclouds.com/about/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20180723212253.jpg">
 
 
 
@@ -461,7 +463,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  518
+                  563
                 </span>
               
 
@@ -477,7 +479,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  2
+                  3
                 </span>
               
             </div>
@@ -504,8 +506,9 @@
 <h1 id="输入示例"><a href="#输入示例" class="headerlink" title="输入示例"></a>输入示例</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">5  </span><br><span class="line">2 3 3 3</span><br></pre></td></tr></table></figure>
 <h1 id="输出示例"><a href="#输出示例" class="headerlink" title="输出示例"></a>输出示例</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">9</span><br></pre></td></tr></table></figure>
 <h1 id="结题思路"><a href="#结题思路" class="headerlink" title="结题思路"></a>结题思路</h1><p>假设a首A长度的歌曲和b首B长度的歌曲组成歌单，那么应该满足下列方程<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a*A+b*B=K  </span><br><span class="line">a&lt;=X;  </span><br><span class="line">b&lt;=Y;</span><br></pre></td></tr></table></figure></p>
-<p>那么总计有C_{X}^{a}\timesC_{Y}^{b}种方法，输出只需要对这个去过取模即可。</p>
+<p>那么，只需要对a和b进行排列组合就可以，输出只需要对这个结果取模即可。</p>
 <h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">#include&lt;cmath&gt;</span><br><span class="line"></span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">long C(int m,int n)&#123;</span><br><span class="line">	long res=0;</span><br><span class="line">	if(0==m || 0==n)&#123;</span><br><span class="line">		return 1;</span><br><span class="line">	&#125;</span><br><span class="line">	if(1==m)&#123;</span><br><span class="line">		return n;</span><br><span class="line">	&#125;</span><br><span class="line">	long x=1;</span><br><span class="line">	long y=n;</span><br><span class="line">	for(int i=1,j=n;i&lt;=m;i++,j--)&#123;</span><br><span class="line">		x=x*i;</span><br><span class="line">		y=y*j;</span><br><span class="line">	&#125;</span><br><span class="line">	return y/x;</span><br><span class="line">&#125; </span><br><span class="line"></span><br><span class="line">int main()&#123;</span><br><span class="line">	const int mod=1000000007;</span><br><span class="line">	int k;</span><br><span class="line">	cin&gt;&gt;k;</span><br><span class="line">	int A,B,X,Y;</span><br><span class="line">	cin&gt;&gt;A;</span><br><span class="line">	cin&gt;&gt;X;</span><br><span class="line">	cin&gt;&gt;B;</span><br><span class="line">	cin&gt;&gt;Y;</span><br><span class="line">	</span><br><span class="line">	long res=0;</span><br><span class="line">	long temp;</span><br><span class="line">	for(int i=0;i&lt;X;i++)&#123;</span><br><span class="line">		for(int j=0;j&lt;Y;j++)&#123;</span><br><span class="line">			temp=i*A+j*B;</span><br><span class="line">			if(temp==k)&#123;</span><br><span class="line">			res+=C(i,X)*C(j,Y);	</span><br><span class="line">			&#125;</span><br><span class="line">			else if(temp&gt;k)&#123;</span><br><span class="line">				break;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		temp=i*A;</span><br><span class="line">		if(temp&gt;k)&#123;</span><br><span class="line">			break;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	cout&lt;&lt; res%mod&lt;&lt;endl;</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这是我的代码，因为我是事后写的，不一定能通过所有的测试用例，欢迎大家指出错误，写完博客，放松下<br><img src="https://blog-picture.obs.cn-north-1.myhwclouds.com/about/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20180723212253.jpg" alt="avatar"></p>
 
       
     </div>
@@ -818,7 +821,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共4.1k字</span>
+  <span class="post-count">博客全站共4.2k字</span>
 </div>
         
 
@@ -1338,7 +1341,7 @@
         }
       });
     </script>
-    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
   
 
 
@@ -1346,7 +1349,24 @@
 
   
 
-<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"model":"wanko","bottom":-30,"mobileShow":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/"});</script></body>
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"model":"wanko","bottom":-30,"mobileShow":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/"});</script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end --></body>
 </html>
 <!-- 页面点击小红心 -->
 <script type="text/javascript" src="/js/src/love.js"></script>
