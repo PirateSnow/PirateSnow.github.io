@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.jlzsnow.top/"/>
-  <updated>2018-08-03T07:25:32.097Z</updated>
+  <updated>2018-08-03T08:30:29.590Z</updated>
   <id>http://www.jlzsnow.top/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>git常用命令总结</title>
+    <link href="http://www.jlzsnow.top/2018/08/03/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E6%80%BB%E7%BB%93/"/>
+    <id>http://www.jlzsnow.top/2018/08/03/git常用命令总结/</id>
+    <published>2018-08-03T07:27:11.000Z</published>
+    <updated>2018-08-03T08:30:29.590Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h1><p>首先推荐一篇<a href="http://iissnan.com/progit/" target="_blank" rel="noopener">ProGit学习指南</a>，讲的非常明白，而且字数少，很实用，之前看了看那个什么Git权威指南，还有配套的视频，说实话，不推荐大家去学习，这个非常好。推荐给大家<a id="more"></a></p><h1 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h1><p>git init—-初始化git，每次新建一个项目之后，我们都必须在对应的项目文件夹内执行该命令<br>git add 文件名/目录—–添加修改过的文件或者目录到本地仓库静态暂存区<br>git status —-查看当前暂存区状态，是否有需要提交的文件<br>git commit -m”备注”—–将暂存区的文件提交到本地仓库<br>git clone —-将远程仓库的内容克隆到本地，然后就可以在本地进行开发了<br>git rm —-移除文件，从工作目录中删除文件，这样就不会出现在未跟踪文件清单中了<br>git log —–查看提交历史，会列出所有的更新<br>git log -p -2—-其中-p参数表示显示每次提交的内容差异，-2表示显示最近的两次更新<br>git log –pretty=oneline —-相当于简约的显示模式<br>git commit –amend —–撤销刚才最新的提交<br>git reset HEAD 文件名 ——将提交到暂存区的文件撤销回来<br>git checkout –<file> —–撤销刚才对文件的修改</file></p><p>git remote -v ——-查看当前的远程库<br>git remote add <url> ——添加远程库<br>git fetch [remote-name] —–从远程库抓取数据<br>git push [remote-name] [branch-name] ——-将本地仓库branch分支推送到远程库<br>git remote show [remote-name] ——-查看远程库的信息<br>git remote rm [remote-name] —–删除远程库<br>git remote rename [old-remote-name] [new-remote-name]——修改远程库名字</url></p><p>git tag—-显示目前工作目录中所有的标签<br>git tag -a <tag> -m”备注” —–其中-a参数表示标签名字，-m后跟备注信息<br>git tag <tag> —–打上轻量级标签</tag></tag></p><p>git checkout [branch-name]—–切换到指定分支<br>git checkout -b [branch-name]——新建该分支并切换到该分支<br>git merge [branch-name] ———合并该分支到当前分支<br>git branch -d [branch-name] —–删除该分支<br>git branch ——显示当前工作目录中的所有分支<br>git branch–merged——查看那些分支已经被并入当前分支<br>git branch –no-merged——-查看那些尚未合并的分支<br>git rebase [branch-name]——-衍合分支</p><p>git stash—-储藏当前工作状态<br>git stash list —–查看储藏列表<br>git stash apply stash@{2} —-切换到储藏2继续工作<br>git stach pop —–取消当前储藏</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;写在前面&quot;&gt;&lt;a href=&quot;#写在前面&quot; class=&quot;headerlink&quot; title=&quot;写在前面&quot;&gt;&lt;/a&gt;写在前面&lt;/h1&gt;&lt;p&gt;首先推荐一篇&lt;a href=&quot;http://iissnan.com/progit/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;ProGit学习指南&lt;/a&gt;，讲的非常明白，而且字数少，很实用，之前看了看那个什么Git权威指南，还有配套的视频，说实话，不推荐大家去学习，这个非常好。推荐给大家
+    
+    </summary>
+    
+      <category term="Git" scheme="http://www.jlzsnow.top/categories/Git/"/>
+    
+    
+      <category term="Git" scheme="http://www.jlzsnow.top/tags/Git/"/>
+    
+  </entry>
   
   <entry>
     <title>在GitHub上发起程序员面试专业问题集锦的项目</title>
