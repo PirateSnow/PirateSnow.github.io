@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.jlzsnow.top/"/>
-  <updated>2018-08-11T12:59:20.846Z</updated>
+  <updated>2018-08-11T15:19:57.530Z</updated>
   <id>http://www.jlzsnow.top/</id>
   
   <author>
@@ -15,6 +15,53 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>在windows下生成ssh文件</title>
+    <link href="http://www.jlzsnow.top/2018/08/11/%E5%9C%A8windows%E4%B8%8B%E7%94%9F%E6%88%90ssh%E6%96%87%E4%BB%B6/"/>
+    <id>http://www.jlzsnow.top/2018/08/11/在windows下生成ssh文件/</id>
+    <published>2018-08-11T15:02:27.000Z</published>
+    <updated>2018-08-11T15:19:57.530Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>刚开始学习Git的时候，我们还是习惯在Windows下玩Git，那么Git的Windows版本完全可以符合你的要求，安装不再赘述看<a href="https://blog.csdn.net/lvkelly/article/details/54666868" target="_blank" rel="noopener">大佬的博文</a>,安装好之后，还需要配置ssh文件来向远程仓库提供密匙，这样才能将本地的代码提交到远程仓库，所以这里说下怎么在Windows下生成.ssh文件</p><h2 id="方法步骤"><a href="#方法步骤" class="headerlink" title="方法步骤"></a>方法步骤</h2><p>第一步：打开git bash，在终端输入如下命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd ~/.ssh/</span><br></pre></td></tr></table></figure></p><p>如果提示 “ No such file or directory”，你可以手动的创建一个 .ssh文件夹即可,步骤如下：<br>首先，用如下命令配置全局的name和email，这里是的你github的user name和user email:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;你的GitHub用户名&quot;  </span><br><span class="line">git config --global user.email &quot;你的GitHub邮箱&quot;</span><br></pre></td></tr></table></figure></p><p>接下来，用如下命令生成.ssh文件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C “你的GitHub邮箱”</span><br></pre></td></tr></table></figure></p><p>输入之后，连续按三个enter就可以了，实际的意义和Ubuntu下差不多，具体参考我的<a href="">这篇博文</a><br>之后，就可以复制公匙到GitHub上了，具体我们下一篇博文再说</p><h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p>最近时间紧张，就这么零零散散写一写吧。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;刚开始学习Git的时候，我们还是习惯在Windows下玩Git，那么Git的Windows版本完全可以符合你的要求，安装不再赘述看&lt;a hr
+      
+    
+    </summary>
+    
+      <category term="Ubuntu" scheme="http://www.jlzsnow.top/categories/Ubuntu/"/>
+    
+    
+      <category term="Ubuntu" scheme="http://www.jlzsnow.top/tags/Ubuntu/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ubuntu下添加ssh公匙</title>
+    <link href="http://www.jlzsnow.top/2018/08/11/ubuntu%E4%B8%8B%E6%B7%BB%E5%8A%A0ssh%E5%85%AC%E5%8C%99/"/>
+    <id>http://www.jlzsnow.top/2018/08/11/ubuntu下添加ssh公匙/</id>
+    <published>2018-08-11T14:47:24.000Z</published>
+    <updated>2018-08-11T15:00:39.945Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>&emsp;&emsp;在Ubuntu下使用git对GitHub上的远程仓库进行操作时，需要响应的ssh密匙验证，但是我们的电脑上，包括虚拟机上一般来说都不会提供.ssh文件，这个时候就需要我们手动去生成一个.ssh密匙文件。<a id="more"></a></p><h2 id="方法步骤"><a href="#方法步骤" class="headerlink" title="方法步骤"></a>方法步骤</h2><p>第一步：打开终端，在终端输入如下命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C “your email”</span><br></pre></td></tr></table></figure></p><p>参数-C后面修改成你的邮箱就可以了<br>运行上述命令后，会产生下面的输出：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Generating public/private rsa key pair.</span><br><span class="line">Enter file in which to save the key (/home/xinu/.ssh/id_rsa):</span><br></pre></td></tr></table></figure></p><p>括号里面是默认的密匙保存路径，可以修改，直接按enter的话，表示按照默认路径保存；<br>直接按enter之后，会产生下面的输出：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Enter passphrase (empty for no passphrase):</span><br></pre></td></tr></table></figure></p><p>这里表示输入密码，记得密码要足够长，我的第一次输入密码太短了，所以导致失败了，也可以直接enter，表示密码为空；<br>之后会产生如下提示：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Enter same passphrase again:</span><br></pre></td></tr></table></figure></p><p>这是要求你再次确认密码，保持和上次输入一致即可。<br>到这里，密匙已经产生，它会告诉你密匙的保存路径以及指纹</p><h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p>密匙产生之后，就可以直接复制到GitHub上就可以了，具体看我的后面的博客吧</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot; title=&quot;背景&quot;&gt;&lt;/a&gt;背景&lt;/h2&gt;&lt;p&gt;&amp;emsp;&amp;emsp;在Ubuntu下使用git对GitHub上的远程仓库进行操作时，需要响应的ssh密匙验证，但是我们的电脑上，包括虚拟机上一般来说都不会提供.ssh文件，这个时候就需要我们手动去生成一个.ssh密匙文件。
+    
+    </summary>
+    
+      <category term="Ubuntu" scheme="http://www.jlzsnow.top/categories/Ubuntu/"/>
+    
+    
+      <category term="Ubuntu" scheme="http://www.jlzsnow.top/tags/Ubuntu/"/>
+    
+  </entry>
   
   <entry>
     <title>Ubuntu下启用root用户</title>

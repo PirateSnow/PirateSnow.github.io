@@ -1,6 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[在windows下生成ssh文件]]></title>
+    <url>%2F2018%2F08%2F11%2F%E5%9C%A8windows%E4%B8%8B%E7%94%9F%E6%88%90ssh%E6%96%87%E4%BB%B6%2F</url>
+    <content type="text"><![CDATA[前言刚开始学习Git的时候，我们还是习惯在Windows下玩Git，那么Git的Windows版本完全可以符合你的要求，安装不再赘述看大佬的博文,安装好之后，还需要配置ssh文件来向远程仓库提供密匙，这样才能将本地的代码提交到远程仓库，所以这里说下怎么在Windows下生成.ssh文件 方法步骤第一步：打开git bash，在终端输入如下命令：1cd ~/.ssh/ 如果提示 “ No such file or directory”，你可以手动的创建一个 .ssh文件夹即可,步骤如下：首先，用如下命令配置全局的name和email，这里是的你github的user name和user email:12git config --global user.name &quot;你的GitHub用户名&quot; git config --global user.email &quot;你的GitHub邮箱&quot; 接下来，用如下命令生成.ssh文件1ssh-keygen -t rsa -C “你的GitHub邮箱” 输入之后，连续按三个enter就可以了，实际的意义和Ubuntu下差不多，具体参考我的这篇博文之后，就可以复制公匙到GitHub上了，具体我们下一篇博文再说 后记最近时间紧张，就这么零零散散写一写吧。]]></content>
+      <categories>
+        <category>Ubuntu</category>
+      </categories>
+      <tags>
+        <tag>Ubuntu</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[ubuntu下添加ssh公匙]]></title>
+    <url>%2F2018%2F08%2F11%2Fubuntu%E4%B8%8B%E6%B7%BB%E5%8A%A0ssh%E5%85%AC%E5%8C%99%2F</url>
+    <content type="text"><![CDATA[背景&emsp;&emsp;在Ubuntu下使用git对GitHub上的远程仓库进行操作时，需要响应的ssh密匙验证，但是我们的电脑上，包括虚拟机上一般来说都不会提供.ssh文件，这个时候就需要我们手动去生成一个.ssh密匙文件。 方法步骤第一步：打开终端，在终端输入如下命令：1ssh-keygen -t rsa -C “your email” 参数-C后面修改成你的邮箱就可以了运行上述命令后，会产生下面的输出：12Generating public/private rsa key pair.Enter file in which to save the key (/home/xinu/.ssh/id_rsa): 括号里面是默认的密匙保存路径，可以修改，直接按enter的话，表示按照默认路径保存；直接按enter之后，会产生下面的输出：1Enter passphrase (empty for no passphrase): 这里表示输入密码，记得密码要足够长，我的第一次输入密码太短了，所以导致失败了，也可以直接enter，表示密码为空；之后会产生如下提示：1Enter same passphrase again: 这是要求你再次确认密码，保持和上次输入一致即可。到这里，密匙已经产生，它会告诉你密匙的保存路径以及指纹 后记密匙产生之后，就可以直接复制到GitHub上就可以了，具体看我的后面的博客吧]]></content>
+      <categories>
+        <category>Ubuntu</category>
+      </categories>
+      <tags>
+        <tag>Ubuntu</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Ubuntu下启用root用户]]></title>
     <url>%2F2018%2F08%2F11%2FUbuntu%E4%B8%8B%E5%90%AF%E7%94%A8root%E7%94%A8%E6%88%B7%2F</url>
     <content type="text"><![CDATA[背景以前刚开始接触Linux，用的是发行版Ubuntu，但是Ubuntu有个很坑爹的问题，那就是没有root用户，你去设置里面添加，死活都不行，试了很多方法，包括修改/etc/passwd下的UID等方法，但是都很麻烦，无意中翻到一个帖子，才找到一个好用的方法，赶紧记录下来，不然又忘记了 方法步骤首先，在终端输入下面命令1sudo passwd -u root 响应如下接下来，在终端输入如下命令：1sudo passwd root 响应如下输入你要设置的密码，不过要注意的是，Linux下你在输入密码的时候，他是不会显示出来的，所以放心大胆的往进去输入就可以了，再次确认接下来，你确认设置root密码是否成功首次输入如下命令，切换到root用户1su root 这是个切换用户命令，如果输入root密码后，你的终端输入由美元符号$变成井号#那就说明你已经切换到root用户了效果如下 后记完美完成，当然还有其他方法暂时拥有root权限，在这里就先不讨论了，Linux真的是个迷，小技巧太多，以后慢慢学习]]></content>
