@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Ubuntu下启用root用户]]></title>
+    <url>%2F2018%2F08%2F11%2FUbuntu%E4%B8%8B%E5%90%AF%E7%94%A8root%E7%94%A8%E6%88%B7%2F</url>
+    <content type="text"><![CDATA[背景以前刚开始接触Linux，用的是发行版Ubuntu，但是Ubuntu有个很坑爹的问题，那就是没有root用户，你去设置里面添加，死活都不行，试了很多方法，包括修改/etc/passwd下的UID等方法，但是都很麻烦，无意中翻到一个帖子，才找到一个好用的方法，赶紧记录下来，不然又忘记了 方法步骤首先，在终端输入下面命令1sudo passwd -u root 响应如下接下来，在终端输入如下命令：1sudo passwd root 响应如下输入你要设置的密码，不过要注意的是，Linux下你在输入密码的时候，他是不会显示出来的，所以放心大胆的往进去输入就可以了，再次确认接下来，你确认设置root密码是否成功首次输入如下命令，切换到root用户1su root 这是个切换用户命令，如果输入root密码后，你的终端输入由美元符号$变成井号#那就说明你已经切换到root用户了效果如下 后记完美完成，当然还有其他方法暂时拥有root权限，在这里就先不讨论了，Linux真的是个迷，小技巧太多，以后慢慢学习]]></content>
+      <categories>
+        <category>Ubuntu</category>
+      </categories>
+      <tags>
+        <tag>Ubuntu</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[在vmware下安装Ubuntu16.04]]></title>
     <url>%2F2018%2F08%2F11%2F%E5%9C%A8vmware%E4%B8%8B%E5%AE%89%E8%A3%85Ubuntu16-04%2F</url>
     <content type="text"><![CDATA[背景最近在写一台高并发服务器的程序，所以需要两台电脑都运行相应的程序，一台电脑即当客户端，又当服务器时，在用webbench进行压力测试的时候，会出现问题，所以需要在另外一台电脑上也安装虚拟机 步骤具体的步骤不多说，网上很多博客写的都很好，我就是按照那些步骤来的，唯一可能没指出的地方就是在虚拟机上安装系统的时候，因为分辨率的问题，安装步骤的有些地方会显示不全，所以，在安装之前一定记得要把调整好分辨率，使之全屏，这样再开始。 参考VMware Workstation上安装Ubuntu 16.04 Desktop操作系统]]></content>

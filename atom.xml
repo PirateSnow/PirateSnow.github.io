@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.jlzsnow.top/"/>
-  <updated>2018-08-11T04:16:50.411Z</updated>
+  <updated>2018-08-11T12:59:20.846Z</updated>
   <id>http://www.jlzsnow.top/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Ubuntu下启用root用户</title>
+    <link href="http://www.jlzsnow.top/2018/08/11/Ubuntu%E4%B8%8B%E5%90%AF%E7%94%A8root%E7%94%A8%E6%88%B7/"/>
+    <id>http://www.jlzsnow.top/2018/08/11/Ubuntu下启用root用户/</id>
+    <published>2018-08-11T12:29:50.000Z</published>
+    <updated>2018-08-11T12:59:20.846Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>以前刚开始接触Linux，用的是发行版Ubuntu，但是Ubuntu有个很坑爹的问题，那就是没有root用户，你去设置里面添加，死活都不行，试了很多方法，包括修改/etc/passwd下的UID等方法，但是都很麻烦，无意中翻到一个帖子，才找到一个好用的方法，赶紧记录下来，不然又忘记了<a id="more"></a></p><h2 id="方法步骤"><a href="#方法步骤" class="headerlink" title="方法步骤"></a>方法步骤</h2><p>首先，在终端输入下面命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo passwd -u root</span><br></pre></td></tr></table></figure></p><p>响应如下<br><img src="https://blog-picture.obs.cn-north-1.myhwclouds.com/ubuntu_add_root_user/step1.png" alt="avatar"><br>接下来，在终端输入如下命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo passwd root</span><br></pre></td></tr></table></figure></p><p>响应如下<br><img src="https://blog-picture.obs.cn-north-1.myhwclouds.com/ubuntu_add_root_user/step2.png" alt="avatar"><br>输入你要设置的密码，不过要注意的是，Linux下你在输入密码的时候，他是不会显示出来的，所以放心大胆的往进去输入就可以了，再次确认<br>接下来，你确认设置root密码是否成功<br>首次输入如下命令，切换到root用户<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">su root</span><br></pre></td></tr></table></figure></p><p>这是个切换用户命令，如果输入root密码后，你的终端输入由美元符号$变成井号#那就说明你已经切换到root用户了<br>效果如下<br><img src="https://blog-picture.obs.cn-north-1.myhwclouds.com/ubuntu_add_root_user/step3.png" alt="avatar"></p><h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p>完美完成，当然还有其他方法暂时拥有root权限，在这里就先不讨论了，Linux真的是个迷，小技巧太多，以后慢慢学习</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot; title=&quot;背景&quot;&gt;&lt;/a&gt;背景&lt;/h2&gt;&lt;p&gt;以前刚开始接触Linux，用的是发行版Ubuntu，但是Ubuntu有个很坑爹的问题，那就是没有root用户，你去设置里面添加，死活都不行，试了很多方法，包括修改/etc/passwd下的UID等方法，但是都很麻烦，无意中翻到一个帖子，才找到一个好用的方法，赶紧记录下来，不然又忘记了
+    
+    </summary>
+    
+      <category term="Ubuntu" scheme="http://www.jlzsnow.top/categories/Ubuntu/"/>
+    
+    
+      <category term="Ubuntu" scheme="http://www.jlzsnow.top/tags/Ubuntu/"/>
+    
+  </entry>
   
   <entry>
     <title>在vmware下安装Ubuntu16.04</title>
