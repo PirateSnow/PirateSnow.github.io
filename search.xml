@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[在vmware下安装Ubuntu16.04]]></title>
+    <url>%2F2018%2F08%2F11%2F%E5%9C%A8vmware%E4%B8%8B%E5%AE%89%E8%A3%85Ubuntu16-04%2F</url>
+    <content type="text"><![CDATA[背景最近在写一台高并发服务器的程序，所以需要两台电脑都运行相应的程序，一台电脑即当客户端，又当服务器时，在用webbench进行压力测试的时候，会出现问题，所以需要在另外一台电脑上也安装虚拟机 步骤具体的步骤不多说，网上很多博客写的都很好，我就是按照那些步骤来的，唯一可能没指出的地方就是在虚拟机上安装系统的时候，因为分辨率的问题，安装步骤的有些地方会显示不全，所以，在安装之前一定记得要把调整好分辨率，使之全屏，这样再开始。 参考VMware Workstation上安装Ubuntu 16.04 Desktop操作系统]]></content>
+      <categories>
+        <category>实用操作</category>
+      </categories>
+      <tags>
+        <tag>实用操作</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[git常用命令总结]]></title>
     <url>%2F2018%2F08%2F03%2Fgit%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E6%80%BB%E7%BB%93%2F</url>
     <content type="text"><![CDATA[写在前面首先推荐一篇ProGit学习指南，讲的非常明白，而且字数少，很实用，之前看了看那个什么Git权威指南，还有配套的视频，说实话，不推荐大家去学习，这个非常好。推荐给大家 常用命令git init—-初始化git，每次新建一个项目之后，我们都必须在对应的项目文件夹内执行该命令git add 文件名/目录—–添加修改过的文件或者目录到本地仓库静态暂存区git status —-查看当前暂存区状态，是否有需要提交的文件git commit -m”备注”—–将暂存区的文件提交到本地仓库git clone —-将远程仓库的内容克隆到本地，然后就可以在本地进行开发了git rm —-移除文件，从工作目录中删除文件，这样就不会出现在未跟踪文件清单中了git log —–查看提交历史，会列出所有的更新git log -p -2—-其中-p参数表示显示每次提交的内容差异，-2表示显示最近的两次更新git log –pretty=oneline —-相当于简约的显示模式git commit –amend —–撤销刚才最新的提交git reset HEAD 文件名 ——将提交到暂存区的文件撤销回来git checkout – —–撤销刚才对文件的修改 git remote -v ——-查看当前的远程库git remote add ——添加远程库git fetch [remote-name] —–从远程库抓取数据git push [remote-name] [branch-name] ——-将本地仓库branch分支推送到远程库git remote show [remote-name] ——-查看远程库的信息git remote rm [remote-name] —–删除远程库git remote rename [old-remote-name] [new-remote-name]——修改远程库名字 git tag—-显示目前工作目录中所有的标签git tag -a -m”备注” —–其中-a参数表示标签名字，-m后跟备注信息git tag —–打上轻量级标签 git checkout [branch-name]—–切换到指定分支git checkout -b [branch-name]——新建该分支并切换到该分支git merge [branch-name] ———合并该分支到当前分支git branch -d [branch-name] —–删除该分支git branch ——显示当前工作目录中的所有分支git branch–merged——查看那些分支已经被并入当前分支git branch –no-merged——-查看那些尚未合并的分支git rebase [branch-name]——-衍合分支 git stash—-储藏当前工作状态git stash list —–查看储藏列表git stash apply stash@{2} —-切换到储藏2继续工作git stach pop —–取消当前储藏]]></content>

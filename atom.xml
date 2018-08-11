@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.jlzsnow.top/"/>
-  <updated>2018-08-03T08:30:29.590Z</updated>
+  <updated>2018-08-11T04:16:50.411Z</updated>
   <id>http://www.jlzsnow.top/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>在vmware下安装Ubuntu16.04</title>
+    <link href="http://www.jlzsnow.top/2018/08/11/%E5%9C%A8vmware%E4%B8%8B%E5%AE%89%E8%A3%85Ubuntu16-04/"/>
+    <id>http://www.jlzsnow.top/2018/08/11/在vmware下安装Ubuntu16-04/</id>
+    <published>2018-08-11T04:08:46.000Z</published>
+    <updated>2018-08-11T04:16:50.411Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>最近在写一台高并发服务器的程序，所以需要两台电脑都运行相应的程序，一台电脑即当客户端，又当服务器时，在用webbench进行压力测试的时候，会出现问题，所以需要在另外一台电脑上也安装虚拟机<a id="more"></a></p><h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><p>具体的步骤不多说，网上很多博客写的都很好，我就是按照那些步骤来的，唯一可能没指出的地方就是在虚拟机上安装系统的时候，因为分辨率的问题，安装步骤的有些地方会显示不全，所以，在安装之前一定记得要把调整好分辨率，使之全屏，这样再开始。</p><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="https://blog.csdn.net/gongxifacai_believe/article/details/52444938" target="_blank" rel="noopener">VMware Workstation上安装Ubuntu 16.04 Desktop操作系统</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot; title=&quot;背景&quot;&gt;&lt;/a&gt;背景&lt;/h2&gt;&lt;p&gt;最近在写一台高并发服务器的程序，所以需要两台电脑都运行相应的程序，一台电脑即当客户端，又当服务器时，在用webbench进行压力测试的时候，会出现问题，所以需要在另外一台电脑上也安装虚拟机
+    
+    </summary>
+    
+      <category term="实用操作" scheme="http://www.jlzsnow.top/categories/%E5%AE%9E%E7%94%A8%E6%93%8D%E4%BD%9C/"/>
+    
+    
+      <category term="实用操作" scheme="http://www.jlzsnow.top/tags/%E5%AE%9E%E7%94%A8%E6%93%8D%E4%BD%9C/"/>
+    
+  </entry>
   
   <entry>
     <title>git常用命令总结</title>
