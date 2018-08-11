@@ -500,15 +500,14 @@
 
       
         
-          
-            <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>刚开始学习Git的时候，我们还是习惯在Windows下玩Git，那么Git的Windows版本完全可以符合你的要求，安装不再赘述看<a href="https://blog.csdn.net/lvkelly/article/details/54666868" target="_blank" rel="noopener">大佬的博文</a>,安装好之后，还需要配置ssh文件来向远程仓库提供密匙，这样才能将本地的代码提交到远程仓库，所以这里说下怎么在Windows下生成.ssh文件</p>
-<h2 id="方法步骤"><a href="#方法步骤" class="headerlink" title="方法步骤"></a>方法步骤</h2><p>第一步：打开git bash，在终端输入如下命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd ~/.ssh/</span><br></pre></td></tr></table></figure></p>
-<p>如果提示 “ No such file or directory”，你可以手动的创建一个 .ssh文件夹即可,步骤如下：<br>首先，用如下命令配置全局的name和email，这里是的你github的user name和user email:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;你的GitHub用户名&quot;  </span><br><span class="line">git config --global user.email &quot;你的GitHub邮箱&quot;</span><br></pre></td></tr></table></figure></p>
-<p>接下来，用如下命令生成.ssh文件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C “你的GitHub邮箱”</span><br></pre></td></tr></table></figure></p>
-<p>输入之后，连续按三个enter就可以了，实际的意义和Ubuntu下差不多，具体参考我的<a href="https://www.jlzsnow.top/2018/08/11/ubuntu%E4%B8%8B%E6%B7%BB%E5%8A%A0ssh%E5%85%AC%E5%8C%99/#more">这篇博文</a><br>之后，就可以复制公匙到GitHub上了，具体我们下一篇博文再说</p>
-<h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p>最近时间紧张，就这么零零散散写一写吧。</p>
-
-          
+          <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>刚开始学习Git的时候，我们还是习惯在Windows下玩Git，那么Git的Windows版本完全可以符合你的要求，安装不再赘述看<a href="https://blog.csdn.net/lvkelly/article/details/54666868" target="_blank" rel="noopener">大佬的博文</a>,安装好之后，还需要配置ssh文件来向远程仓库提供密匙，这样才能将本地的代码提交到远程仓库，所以这里说下怎么在Windows下生成.ssh文件
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/08/11/在windows下生成ssh文件/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
