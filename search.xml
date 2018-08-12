@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[在GitHub上添加SSH密匙]]></title>
+    <url>%2F2018%2F08%2F12%2F%E5%9C%A8GitHub%E4%B8%8A%E6%B7%BB%E5%8A%A0SSH%E5%AF%86%E5%8C%99%2F</url>
+    <content type="text"><![CDATA[背景在本地git向远程GitHub仓库提交代码时，需要在GitHub网页上添加上本地SSH密匙，本篇博文来说明这个过程 方法步骤第一步，打开本地的ssh文件，如果没有本地ssh文件，可以自己新建，步骤看我的两篇博文：在Ubuntu下生成SSH文件在Windows下生成SSH文件按照里面的目录打开id_rsa.pub文件，这个是公匙，还有另外一个文件id_rsa存储的私匙,打开公匙文件id_rsa.pub文件，复制里面的所有内容第二步，打开GitHub网页，登录，这些步骤不再赘述第三步，登录之后的页面显示如下，可能有些地方不一样，点击右上角的头像，然后点击setting选项，如下：第四步，在左边栏选择SSH和GPG选项，如图第五步，点击添加新的SSH密匙,如下第六步，将复制好的公匙，填到网页上，确认添加即可完成。接下来就可以在Git上部署代码，然后提交了 后记这些事很久之前做的，最近忙里偷闲，总结下]]></content>
+      <categories>
+        <category>Ubuntu</category>
+      </categories>
+      <tags>
+        <tag>Ubuntu</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[在windows下生成ssh文件]]></title>
     <url>%2F2018%2F08%2F11%2F%E5%9C%A8windows%E4%B8%8B%E7%94%9F%E6%88%90ssh%E6%96%87%E4%BB%B6%2F</url>
     <content type="text"><![CDATA[前言刚开始学习Git的时候，我们还是习惯在Windows下玩Git，那么Git的Windows版本完全可以符合你的要求，安装不再赘述看大佬的博文,安装好之后，还需要配置ssh文件来向远程仓库提供密匙，这样才能将本地的代码提交到远程仓库，所以这里说下怎么在Windows下生成.ssh文件 方法步骤第一步：打开git bash，在终端输入如下命令：1cd ~/.ssh/ 如果提示 “ No such file or directory”，你可以手动的创建一个 .ssh文件夹即可,步骤如下：首先，用如下命令配置全局的name和email，这里是的你github的user name和user email:12git config --global user.name &quot;你的GitHub用户名&quot; git config --global user.email &quot;你的GitHub邮箱&quot; 接下来，用如下命令生成.ssh文件1ssh-keygen -t rsa -C “你的GitHub邮箱” 输入之后，连续按三个enter就可以了，实际的意义和Ubuntu下差不多，具体参考我的这篇博文之后，就可以复制公匙到GitHub上了，具体我们下一篇博文再说 后记最近时间紧张，就这么零零散散写一写吧。]]></content>
