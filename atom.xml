@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.jlzsnow.top/"/>
-  <updated>2018-08-13T07:44:15.433Z</updated>
+  <updated>2018-08-18T14:16:03.981Z</updated>
   <id>http://www.jlzsnow.top/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>推荐思维导图工具mindmaster</title>
+    <link href="http://www.jlzsnow.top/2018/08/18/%E6%8E%A8%E8%8D%90%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE%E5%B7%A5%E5%85%B7mindmaster/"/>
+    <id>http://www.jlzsnow.top/2018/08/18/推荐思维导图工具mindmaster/</id>
+    <published>2018-08-18T14:10:58.000Z</published>
+    <updated>2018-08-18T14:16:03.981Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>今天在没事读读书社的群里，看到有人发了习惯的力量的思维导图，才知道原来那样的图是拿思维导图软件画出来，长知识了，赶紧自己也整一个<a id="more"></a></p><h2 id="MindMaster"><a href="#MindMaster" class="headerlink" title="MindMaster"></a>MindMaster</h2><p>上网百度了一下，思维导图软件好多，本来想用minimanger的，结果这个软件是付费的，而且死活破解不了，没办法，只好卸载之后选择了mindmaster软件，刚试了一下，还挺好用，以后总结就靠它了</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot; title=&quot;背景&quot;&gt;&lt;/a&gt;背景&lt;/h2&gt;&lt;p&gt;今天在没事读读书社的群里，看到有人发了习惯的力量的思维导图，才知道原来那样的图是拿思维导图软件画出来，长知识了，赶紧自己也整一个
+    
+    </summary>
+    
+      <category term="MindMaster" scheme="http://www.jlzsnow.top/categories/MindMaster/"/>
+    
+    
+      <category term="MindMaster" scheme="http://www.jlzsnow.top/tags/MindMaster/"/>
+    
+  </entry>
   
   <entry>
     <title>从远程仓库抓取数据并且合并</title>
