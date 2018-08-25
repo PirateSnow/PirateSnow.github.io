@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Linux内核设计与实现总结]]></title>
+    <url>%2F2018%2F08%2F25%2FLinux%E5%86%85%E6%A0%B8%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E6%80%BB%E7%BB%93%2F</url>
+    <content type="text"><![CDATA[背景这两天在看Linux内核设计与实现，看完了，以思维导图的方式总结一下，这也是我第一次尝试以思维导图来总结，先试试效果 结构划分实际上，整个内核是一个整体，很难具体的去划分那些属于那些模块，而且这些模块里面都是相互缠绕的，很难解释清楚，我就粗略的按照书里面的内容，再按照自己的总结，划分这样一些模块 进程管理 进程管理 进程上下文 线程管理 进程调度 内存管理 物理内存管理 slab层管理 页高速缓冲管理 虚拟内存管理 进程空间管理 文件系统 超级块 iNode节点 其他一些节点 时钟 节拍 定时器 jiffies 时钟中断 中断 中断处理程序–也叫做中断上文 中断下文 软中断 tasklet 工作队列 内核同步 信号量与二值信号量 自旋锁 互斥体 完成信号 顺序信号量 顺序与屏障 系统调用 声明系统调用号 编写系统调用函数 加入系统调用表思维导图思维导图如下：点击下载图片]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[推荐思维导图工具mindmaster]]></title>
     <url>%2F2018%2F08%2F18%2F%E6%8E%A8%E8%8D%90%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE%E5%B7%A5%E5%85%B7mindmaster%2F</url>
     <content type="text"><![CDATA[背景今天在没事读读书社的群里，看到有人发了习惯的力量的思维导图，才知道原来那样的图是拿思维导图软件画出来，长知识了，赶紧自己也整一个 MindMaster上网百度了一下，思维导图软件好多，本来想用minimanger的，结果这个软件是付费的，而且死活破解不了，没办法，只好卸载之后选择了mindmaster软件，刚试了一下，还挺好用，以后总结就靠它了]]></content>

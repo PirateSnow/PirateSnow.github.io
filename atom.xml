@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.jlzsnow.top/"/>
-  <updated>2018-08-18T14:16:03.981Z</updated>
+  <updated>2018-08-25T04:04:55.124Z</updated>
   <id>http://www.jlzsnow.top/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Linux内核设计与实现总结</title>
+    <link href="http://www.jlzsnow.top/2018/08/25/Linux%E5%86%85%E6%A0%B8%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E6%80%BB%E7%BB%93/"/>
+    <id>http://www.jlzsnow.top/2018/08/25/Linux内核设计与实现总结/</id>
+    <published>2018-08-25T00:48:29.000Z</published>
+    <updated>2018-08-25T04:04:55.124Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>这两天在看Linux内核设计与实现，看完了，以思维导图的方式总结一下，这也是我第一次尝试以思维导图来总结，先试试效果<a id="more"></a></p><h2 id="结构划分"><a href="#结构划分" class="headerlink" title="结构划分"></a>结构划分</h2><p>实际上，整个内核是一个整体，很难具体的去划分那些属于那些模块，而且这些模块里面都是相互缠绕的，很难解释清楚，我就粗略的按照书里面的内容，再按照自己的总结，划分这样一些模块</p><ul><li>进程管理<ul><li>进程管理<ul><li>进程上下文</li></ul></li><li>线程管理</li><li>进程调度</li></ul></li><li>内存管理<ul><li>物理内存管理<ul><li>slab层管理</li><li>页高速缓冲管理</li></ul></li><li>虚拟内存管理<ul><li>进程空间管理</li></ul></li></ul></li><li>文件系统<ul><li>超级块</li><li>iNode节点</li><li>其他一些节点</li></ul></li><li>时钟<ul><li>节拍</li><li>定时器</li><li>jiffies</li><li>时钟中断</li></ul></li><li>中断<ul><li>中断处理程序–也叫做中断上文</li><li>中断下文<ul><li>软中断</li><li>tasklet</li><li>工作队列</li></ul></li></ul></li><li>内核同步<ul><li>信号量与二值信号量</li><li>自旋锁</li><li>互斥体</li><li>完成信号</li><li>顺序信号量</li><li>顺序与屏障</li></ul></li><li>系统调用<ul><li>声明系统调用号</li><li>编写系统调用函数</li><li>加入系统调用表<h2 id="思维导图"><a href="#思维导图" class="headerlink" title="思维导图"></a>思维导图</h2>思维导图如下：<br><img src="https://blog-picture.obs.cn-north-1.myhwclouds.com/linux%20kernel/Linux.jpg" alt=""><br><a href="https://obs.cn-north-1.myhwclouds.com:443/blog-picture/linux%20kernel/Linux.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=14dcxNxXXkMgyWFu0g78%2F20180824%2Fcn-north-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20180824T150754Z&amp;X-Amz-Expires=300&amp;X-Amz-Signature=6234664d7d4db29a26ae494e49241e25c5d8d6a016dd6a50116e653ec2a6104b&amp;X-Amz-SignedHeaders=host&amp;response-content-disposition=attachment&amp;versionId=null&amp;x-image-process=style%2Fpicture-logo" target="_blank" rel="noopener">点击下载图片</a></li></ul></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;背景&quot;&gt;&lt;a href=&quot;#背景&quot; class=&quot;headerlink&quot; title=&quot;背景&quot;&gt;&lt;/a&gt;背景&lt;/h2&gt;&lt;p&gt;这两天在看Linux内核设计与实现，看完了，以思维导图的方式总结一下，这也是我第一次尝试以思维导图来总结，先试试效果
+    
+    </summary>
+    
+      <category term="Linux" scheme="http://www.jlzsnow.top/categories/Linux/"/>
+    
+    
+      <category term="Linux" scheme="http://www.jlzsnow.top/tags/Linux/"/>
+    
+  </entry>
   
   <entry>
     <title>推荐思维导图工具mindmaster</title>
